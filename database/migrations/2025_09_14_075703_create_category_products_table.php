@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('category_products', function (Blueprint $table) {
             $table->id();
-            $table->string('name_category')->unique();
+            $table->string('name_category')->unique()->nullable(false);
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }

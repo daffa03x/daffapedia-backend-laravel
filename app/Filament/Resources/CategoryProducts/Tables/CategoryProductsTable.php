@@ -15,7 +15,11 @@ class CategoryProductsTable
         return $table
             ->columns([
                 TextColumn::make('name_category')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
+                TextColumn::make('slug')
+                    ->searchable()
+                    ->sortable(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
